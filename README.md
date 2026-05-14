@@ -23,6 +23,23 @@ pip install -r requirements.txt
 
 Необходимо скачать файл `shape_predictor_68_face_landmarks.dat` и разместить его в корне проекта.
 
+Команды для загрузки:
+
+- Windows (PowerShell):
+
+```powershell
+Invoke-WebRequest -Uri "http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2" -OutFile "shape_predictor_68_face_landmarks.dat.bz2"
+tar -xjf "shape_predictor_68_face_landmarks.dat.bz2"
+Remove-Item "shape_predictor_68_face_landmarks.dat.bz2"
+```
+
+- Linux/macOS (bash):
+
+```bash
+curl -L -o shape_predictor_68_face_landmarks.dat.bz2 "http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2"
+bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
+```
+
 По умолчанию скрипт ожидает путь:
 
 ```text
